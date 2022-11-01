@@ -12,7 +12,7 @@ function calcSumOfSquares(a,b)
 function calcHyp()
 {
      var sumSquares=calcSumOfSquares(Number(sides[0].value),Number(sides[1].value));
-    console.log(sumSquares);
+
     var lengthOfHypotenuse = Math.sqrt(sumSquares);
     output.innerText = `The length of hypotenuse is ${lengthOfHypotenuse}`
 
