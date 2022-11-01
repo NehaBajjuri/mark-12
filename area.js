@@ -1,20 +1,20 @@
-input = document.querySelectorAll('.input-value');
-button = document.querySelector('#cal-btn');
-output = document.querySelector('#out-put');
+ var input = document.querySelectorAll('.input');
+var button = document.querySelector('#cal-btn');
+ var output = document.querySelector('#out-put');
 
-button.addEventListener("click",areaOfTri);
- function areaOfTri()
- {
-    var calArea = calcProd(Number(input[0].value),Number(input[1].value));
-    var areaOfTria = calArea;
-    
- }
- 
+button.addEventListener("click",areaOfTriangle);
 function calcProd(a,b)
 {
-   var area = (a*b)/2;
-   output.innerText = `The area of the triangle is ${areaOfTria}`;
-  
+ 
+    var area = a*b;
+   return (area)/2;
+
 }
 
+function areaOfTriangle()
+{
+ 
+     var areaOfTri=calcProd(Number(input[0].value),Number(input[1].value));
+     output.innerText = `The area of the triangle is ${areaOfTri} ` ;
 
+}
