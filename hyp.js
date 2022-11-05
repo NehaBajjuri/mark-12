@@ -1,4 +1,4 @@
-var sides = document.querySelectorAll('.side-input');
+var inputs = document.querySelectorAll('.side-input');
 var hypBtn = document.querySelector('#hypo-button');
 var output = document.querySelector('#out-put');
 
@@ -11,9 +11,21 @@ function calcSumOfSquares(a,b)
 }
 function calcHyp()
 {
-     var sumSquares=calcSumOfSquares(Number(sides[0].value),Number(sides[1].value));
-
+     var sumSquares=calcSumOfSquares(Number(inputs[0].value),Number(inputs[1].value));
+     var lengthOfHypotenuse = Math.sqrt(sumSquares);
+     if(inputs[0].value === ""|| inputs[1].value === "")
+     {
+          output.innerText = "Please fill up everything!";
+     }
+     
+     else if (inputs[0].value<=0 || inputs[1].value<=0 )
+     {
+          output.innerText = "Please give positive numbers!";
+     }
+     else{
     var lengthOfHypotenuse = Math.sqrt(sumSquares);
+
     output.innerText = `The length of hypotenuse is ${lengthOfHypotenuse}`
 
+     }
 }
