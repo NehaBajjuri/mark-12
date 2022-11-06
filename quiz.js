@@ -11,6 +11,10 @@ function calculate()
    var formResults = new FormData(quizForm);
    for(let value of formResults.values())
    {
+      if(value === "")
+      {
+         output.innerText = "Guess all the answers";
+      }
      if(value === correctAnswers[index])
      {
         score=score+1;

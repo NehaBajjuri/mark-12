@@ -27,9 +27,9 @@ function areaOfTriangle()
                output.innerText = "Please fill up everything!";
           }
           
-          else if (inputs[0].value<=0 || inputs[1].value<=0 )
+          else if (inputs[0].value <=0 || inputs[1].value <=0 )
           {
-               output.innerText = "Please give positive numbers!";
+               output.innerText = "Please give positive integers!";
           }
      }
     
