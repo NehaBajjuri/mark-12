@@ -6,7 +6,8 @@ button.addEventListener("click",areaOfTriangle);
 function calcProd(a,b)
 {
  
-    var area = (a*b)/2;
+ 
+     var area = (a*b)/2;
     
    return area;
 
@@ -28,6 +29,11 @@ function areaOfTriangle()
           }
           
           else if (inputs[0].value <=0 || inputs[1].value <=0 )
+          {
+               output.innerText = "Please give positive integers!";
+          }
+           
+          else if (inputs[0].value < 0 && inputs[1].value <0 )
           {
                output.innerText = "Please give positive integers!";
           }
