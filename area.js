@@ -18,29 +18,26 @@ function areaOfTriangle()
      
      
      var areaOfTri = calcProd(Number(inputs[0].value),Number(inputs[1].value));
-     if(areaOfTri > 0)
-     {
-          output.innerText = "The area of the triangle is " +areaOfTri;
-     }
-     else{
+    
+   
+ 
           if(inputs[0].value === ""|| inputs[1].value === "")
           {
                output.innerText = "Please fill up everything!";
           }
-          else if (inputs[0].value < 0 && inputs[1].value <0 )
+          else if(inputs[0].value <=0 || inputs[1].value <=0)
           {
                output.innerText = "Please give positive integers!";
           }
-          else if (inputs[0].value <=0 || inputs[1].value <=0 )
-          {
-               output.innerText = "Please give positive integers!";
+          else{
+             
+          output.innerText = "The area of the triangle is " +areaOfTri;  
           }
-           
+
           
      }
-    
-
-}
+           
+          
     
     
 
