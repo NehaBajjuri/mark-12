@@ -20,7 +20,7 @@ function calcHyp()
      
      else if (inputs[0].value<=0 || inputs[1].value<=0 )
      {
-          output.innerText = "Please give positive numbers!";
+          output.innerText = "Please give positive integers!";
      }
      else{
     var lengthOfHypotenuse = Math.sqrt(sumSquares);
